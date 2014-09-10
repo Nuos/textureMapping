@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3427FB28-E8DE-49B0-B7A0-162878697383</string>
+	<key>IDESourceControlProjectName</key>
+	<string>draw-triangle</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>11C0DAA9-FC94-4D42-B0D1-1FE3EA387E0A</key>
+		<string>https://github.com/opengl-records/transformation-matrices.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>draw-triangle/draw-triangle.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>11C0DAA9-FC94-4D42-B0D1-1FE3EA387E0A</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/opengl-records/transformation-matrices.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>11C0DAA9-FC94-4D42-B0D1-1FE3EA387E0A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>11C0DAA9-FC94-4D42-B0D1-1FE3EA387E0A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>transformation-matrices</string>
+		</dict>
+	</array>
+</dict>
+</plist>

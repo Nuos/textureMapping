@@ -1,0 +1,289 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5FA8175819B0183F00CFC3F4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FA8175719B0183F00CFC3F4 /* main.cpp */; };
+		5FA8176119B0185A00CFC3F4 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FA8176019B0185A00CFC3F4 /* CoreVideo.framework */; };
+		5FA8176319B0185F00CFC3F4 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FA8176219B0185F00CFC3F4 /* OpenGL.framework */; };
+		5FA8176519B0186900CFC3F4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FA8176419B0186900CFC3F4 /* Cocoa.framework */; };
+		5FA8176719B0186E00CFC3F4 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FA8176619B0186E00CFC3F4 /* IOKit.framework */; };
+		5FA8176919B0187A00CFC3F4 /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FA8176819B0187A00CFC3F4 /* libglfw3.a */; };
+		5FABD33A19BF20970017DDC1 /* libfreeimage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FABD33919BF20970017DDC1 /* libfreeimage.a */; };
+		5FB6C61919B408B400FC95A1 /* ShaderLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FB6C61719B408B400FC95A1 /* ShaderLoader.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5FA8175219B0183F00CFC3F4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5F76F4AF19B6C0E900B7C59E /* simpleShader.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = simpleShader.vert; sourceTree = "<group>"; };
+		5F76F4B019B6C0F800B7C59E /* simpleShader.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = simpleShader.frag; sourceTree = "<group>"; };
+		5FA8175419B0183F00CFC3F4 /* transformation-matrices */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "transformation-matrices"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FA8175719B0183F00CFC3F4 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		5FA8176019B0185A00CFC3F4 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		5FA8176219B0185F00CFC3F4 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		5FA8176419B0186900CFC3F4 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		5FA8176619B0186E00CFC3F4 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		5FA8176819B0187A00CFC3F4 /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw3.a; path = ../../../../../../../usr/local/lib/libglfw3.a; sourceTree = "<group>"; };
+		5FABD33919BF20970017DDC1 /* libfreeimage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfreeimage.a; path = ../../../../../Tools/OpenGL/freeimage/libfreeimage.a; sourceTree = "<group>"; };
+		5FABD33D19BF27420017DDC1 /* test1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test1.jpg; sourceTree = "<group>"; };
+		5FB6C61719B408B400FC95A1 /* ShaderLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShaderLoader.cpp; sourceTree = "<group>"; };
+		5FB6C61819B408B400FC95A1 /* ShaderLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderLoader.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5FA8175119B0183F00CFC3F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FABD33A19BF20970017DDC1 /* libfreeimage.a in Frameworks */,
+				5FA8176919B0187A00CFC3F4 /* libglfw3.a in Frameworks */,
+				5FA8176719B0186E00CFC3F4 /* IOKit.framework in Frameworks */,
+				5FA8176519B0186900CFC3F4 /* Cocoa.framework in Frameworks */,
+				5FA8176319B0185F00CFC3F4 /* OpenGL.framework in Frameworks */,
+				5FA8176119B0185A00CFC3F4 /* CoreVideo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5FA8174B19B0183F00CFC3F4 = {
+			isa = PBXGroup;
+			children = (
+				5FABD33919BF20970017DDC1 /* libfreeimage.a */,
+				5FA8176819B0187A00CFC3F4 /* libglfw3.a */,
+				5FA8176619B0186E00CFC3F4 /* IOKit.framework */,
+				5FA8176419B0186900CFC3F4 /* Cocoa.framework */,
+				5FA8176219B0185F00CFC3F4 /* OpenGL.framework */,
+				5FA8176019B0185A00CFC3F4 /* CoreVideo.framework */,
+				5FA8175619B0183F00CFC3F4 /* draw-triangle */,
+				5FA8175519B0183F00CFC3F4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5FA8175519B0183F00CFC3F4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5FA8175419B0183F00CFC3F4 /* transformation-matrices */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5FA8175619B0183F00CFC3F4 /* draw-triangle */ = {
+			isa = PBXGroup;
+			children = (
+				5FA8175719B0183F00CFC3F4 /* main.cpp */,
+				5FB6C61719B408B400FC95A1 /* ShaderLoader.cpp */,
+				5FABD33D19BF27420017DDC1 /* test1.jpg */,
+				5FB6C61819B408B400FC95A1 /* ShaderLoader.h */,
+				5F76F4AF19B6C0E900B7C59E /* simpleShader.vert */,
+				5F76F4B019B6C0F800B7C59E /* simpleShader.frag */,
+			);
+			path = "draw-triangle";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5FA8175319B0183F00CFC3F4 /* transformation-matrices */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FA8175D19B0183F00CFC3F4 /* Build configuration list for PBXNativeTarget "transformation-matrices" */;
+			buildPhases = (
+				5FA8175019B0183F00CFC3F4 /* Sources */,
+				5FA8175119B0183F00CFC3F4 /* Frameworks */,
+				5FA8175219B0183F00CFC3F4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "transformation-matrices";
+			productName = "draw-triangle";
+			productReference = 5FA8175419B0183F00CFC3F4 /* transformation-matrices */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5FA8174C19B0183F00CFC3F4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = rungame.me;
+			};
+			buildConfigurationList = 5FA8174F19B0183F00CFC3F4 /* Build configuration list for PBXProject "transformation-matrices" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5FA8174B19B0183F00CFC3F4;
+			productRefGroup = 5FA8175519B0183F00CFC3F4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5FA8175319B0183F00CFC3F4 /* transformation-matrices */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5FA8175019B0183F00CFC3F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FA8175819B0183F00CFC3F4 /* main.cpp in Sources */,
+				5FB6C61919B408B400FC95A1 /* ShaderLoader.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5FA8175B19B0183F00CFC3F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5FA8175C19B0183F00CFC3F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5FA8175E19B0183F00CFC3F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Applications/Xcode\\ 5.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+					/usr/local/include,
+					"/Users/wistoneqqx/Documents/opengl/opengl-study-records/transformation-matrices/draw-triangle/draw-triangle/Libraries/glm",
+					/Users/wistoneqqx/Tools/OpenGL/freeimage,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					/Users/wistoneqqx/Tools/OpenGL/freeimage,
+				);
+				PRODUCT_NAME = "transformation-matrices";
+			};
+			name = Debug;
+		};
+		5FA8175F19B0183F00CFC3F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Applications/Xcode\\ 5.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+					/usr/local/include,
+					"/Users/wistoneqqx/Documents/opengl/opengl-study-records/transformation-matrices/draw-triangle/draw-triangle/Libraries/glm",
+					/Users/wistoneqqx/Tools/OpenGL/freeimage,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					/Users/wistoneqqx/Tools/OpenGL/freeimage,
+				);
+				PRODUCT_NAME = "transformation-matrices";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5FA8174F19B0183F00CFC3F4 /* Build configuration list for PBXProject "transformation-matrices" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FA8175B19B0183F00CFC3F4 /* Debug */,
+				5FA8175C19B0183F00CFC3F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5FA8175D19B0183F00CFC3F4 /* Build configuration list for PBXNativeTarget "transformation-matrices" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FA8175E19B0183F00CFC3F4 /* Debug */,
+				5FA8175F19B0183F00CFC3F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5FA8174C19B0183F00CFC3F4 /* Project object */;
+}
