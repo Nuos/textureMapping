@@ -12,12 +12,12 @@
 GLuint vao;
 GLuint vbo[3];
 
-#define ATTRIB_POSITION_LOCATION 0
-#define ATTRIB_COLOR_LOCATION 1
-#define ATTRIB_UV_LOCATION 2
+#define ATTRIB_LOCATION_POSITION 0
+#define ATTRIB_LOCATION_COLOR 1
+#define ATTRIB_LOCATION_UV 2
 
 ShaderLoader shaderLoader;
-GLuint texLocation;
+GLuint textureLocation;
 
 //图片大小
 GLint width,height;
@@ -53,8 +53,8 @@ static bool LoadImg(const char* fname)
     RGBQUAD m_rgb;
     
     //获取图片长宽
-    width = (int)FreeImage_GetWidth(bitmap);
-    height = (int)FreeImage_GetHeight(bitmap);
+    width = (GLint)FreeImage_GetWidth(bitmap);
+    height = (GLint)FreeImage_GetHeight(bitmap);
     
     imgBuf = new unsigned char[width*height*4];
     
@@ -86,7 +86,6 @@ static bool LoadImg(const char* fname)
     return true;
 }
 
-//设置三角形
 void initTriangle(void)
 {
     static const GLfloat g_vertex_buffer_data[] = {
@@ -110,48 +109,46 @@ void initTriangle(void)
         1.0f,0.0f,
     };
     
-    //1，生成指定的VBO信息
-    //顶点信息
+    //生成VBO
     glGenBuffers(3, vbo);
     glBindBuffer(GL_ARRAY_BUFFER, vbo[0]);
     glBufferData(GL_ARRAY_BUFFER, sizeof(g_vertex_buffer_data), g_vertex_buffer_data, GL_STATIC_DRAW);
     
-    //颜色信息
     glBindBuffer(GL_ARRAY_BUFFER, vbo[1]);
     glBufferData(GL_ARRAY_BUFFER, sizeof(g_color_buffer_data), g_color_buffer_data, GL_STATIC_DRAW);
     
-    //UV信息
     glBindBuffer(GL_ARRAY_BUFFER, vbo[2]);
     glBufferData(GL_ARRAY_BUFFER, sizeof(uv_data), uv_data, GL_STATIC_DRAW);
     
-    //2，生成VAO，并绑定VBO信息
+    //生成VAO，并绑定VBO
     glGenVertexArrays(1,&vao);
-    glBindVertexArray(vao);
-    glBindBuffer(GL_ARRAY_BUFFER, vbo[0]);
-    glVertexAttribPointer(ATTRIB_POSITION_LOCATION,3,GL_FLOAT,GL_FALSE,0,0);
     
-    glBindBuffer(GL_ARRAY_BUFFER, vbo[1]);
-    glVertexAttribPointer(ATTRIB_COLOR_LOCATION,3,GL_FLOAT,GL_FALSE,0,0);
-    
-    glBindBuffer(GL_ARRAY_BUFFER, vbo[2]);
-    glVertexAttribPointer(ATTRIB_UV_LOCATION,2,GL_FLOAT,GL_FALSE,0,0);
-    
-    glEnableVertexAttribArray(ATTRIB_POSITION_LOCATION);
-    glEnableVertexAttribArray(ATTRIB_COLOR_LOCATION);
-    glEnableVertexAttribArray(ATTRIB_UV_LOCATION);
+        glBindVertexArray(vao);
+        glBindBuffer(GL_ARRAY_BUFFER, vbo[0]);
+        glVertexAttribPointer(ATTRIB_LOCATION_POSITION,3,GL_FLOAT,GL_FALSE,0,0);//指定VBO格式
+        
+        glBindBuffer(GL_ARRAY_BUFFER, vbo[1]);
+        glVertexAttribPointer(ATTRIB_LOCATION_COLOR,3,GL_FLOAT,GL_FALSE,0,0);
+        
+        glBindBuffer(GL_ARRAY_BUFFER, vbo[2]);
+        glVertexAttribPointer(ATTRIB_LOCATION_UV,2,GL_FLOAT,GL_FALSE,0,0);
+        
+        //设置shader属性可访问
+        glEnableVertexAttribArray(ATTRIB_LOCATION_POSITION);
+        glEnableVertexAttribArray(ATTRIB_LOCATION_COLOR);
+        glEnableVertexAttribArray(ATTRIB_LOCATION_UV);
     
     glBindVertexArray(0);
     
-    //3，生成绑定贴图的2D纹理
+    
+    //生成2D纹理
     glGenTextures(1, &mTextureID);
-
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, mTextureID);
-    glUniform1i(texLocation, 0);
-    
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, imgBuf);
+    glUniform1i(textureLocation,0);//设置纹理单元索引
 
-    // 设置基本纹理参数
+    //设置纹理过滤
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
@@ -161,11 +158,12 @@ void initTriangle(void)
 //设置并使用着色器
 void initShader(void)
 {
-    shaderLoader.load("/Users/wistoneqqx/Documents/opengl/opengl-study-records/texture-cube/draw-triangle/draw-triangle/simpleShader.vert",
-                      "/Users/wistoneqqx/Documents/opengl/opengl-study-records/texture-cube/draw-triangle/draw-triangle/simpleShader.frag");
+    shaderLoader.load("/Users/wistoneqqx/Documents/opengl/github/texture-maps-gl6/draw-triangle/draw-triangle/simpleShader.vert",
+                      "/Users/wistoneqqx/Documents/opengl/github/texture-maps-gl6/draw-triangle/draw-triangle/simpleShader.frag");
     shaderLoader.bind();
     
-    texLocation  = glGetUniformLocation(shaderLoader.getProgramID(), "cube_texture");
+    //获取uniform变量的位置
+    textureLocation = glGetUniformLocation(shaderLoader.getProgramID(), "cube_texture");
 }
 
 //画三角形
@@ -179,11 +177,9 @@ void drawTriangle(void)
 
 int main(void)
 {
-    if(false == LoadImg("/Users/wistoneqqx/Documents/opengl/opengl-study-records/texture-cube/draw-triangle/draw-triangle/test1.jpg"))
-    {
+    if(false == LoadImg("/Users/wistoneqqx/Documents/opengl/github/texture-maps-gl6/draw-triangle/draw-triangle/test1.jpg")){
         printf("加载图片失败！\n");
     }
-    
     
     GLFWwindow* window;
     

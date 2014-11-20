@@ -10,22 +10,26 @@
 	<string>transformation-matrices</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>550F4CAA825D554B14D037086D374322B502CC32</key>
+		<string>https://github.com/opengl-records/texture-maps-gl6.git</string>
 		<key>FBDBDBB2-F034-4FF2-A145-F15F8181F411</key>
 		<string>https://github.com/opengl-records/texture-cube.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>draw-triangle/transformation-matrices.xcodeproj/project.xcworkspace</string>
+	<string>draw-triangle/transformation-matrices.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>FBDBDBB2-F034-4FF2-A145-F15F8181F411</key>
+		<key>550F4CAA825D554B14D037086D374322B502CC32</key>
 		<string>../../..</string>
+		<key>FBDBDBB2-F034-4FF2-A145-F15F8181F411</key>
+		<string>../../../../texture-cube</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/opengl-records/texture-cube.git</string>
+	<string>https://github.com/opengl-records/texture-maps-gl6.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>FBDBDBB2-F034-4FF2-A145-F15F8181F411</string>
+	<string>550F4CAA825D554B14D037086D374322B502CC32</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -35,6 +39,14 @@
 			<string>FBDBDBB2-F034-4FF2-A145-F15F8181F411</string>
 			<key>IDESourceControlWCCName</key>
 			<string>texture-cube</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>550F4CAA825D554B14D037086D374322B502CC32</string>
+			<key>IDESourceControlWCCName</key>
+			<string>texture-maps-gl6</string>
 		</dict>
 	</array>
 </dict>
